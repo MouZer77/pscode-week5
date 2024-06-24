@@ -1,10 +1,48 @@
-FOR each number from 1 to 100 DO:
-    IF number % 15 == 0 THEN:        // Divisible by both 3 and 5
-        PRINT "FizzBuzz"
-    ELSE IF number % 3 == 0 THEN:    // Divisible by 3
-        PRINT "Fizz"
-    ELSE IF number % 5 == 0 THEN:    // Divisible by 5
-        PRINT "Buzz"
-    ELSE:                            // Not divisible by 3 or 5
-        PRINT number
-END
+Part 1:
+PRINT "Enter the first number:"
+READ num1
+
+PRINT "Enter the second number:"
+READ num2
+
+sum = num1 + num2
+
+PRINT "The sum of the two numbers is:", sum
+
+
+Part 2:
+PRINT "Enter a number:"
+READ number
+
+IF number % 2 == 0 THEN:
+    PRINT "The number is even."
+ELSE:
+    PRINT "The number is odd."
+
+
+Part 3:
+numbers = []  // Create an empty list to store the numbers
+
+FOR i from 1 to 5 DO:
+    PRINT "Enter number", i, ":"
+    READ num
+    numbers.append(num)  // Add the number to the list
+
+sum = 0
+FOR num in numbers:
+    sum = sum + num
+
+average = sum / 5
+
+min = numbers[0]   // First number is the smallest
+max = numbers[0]   // First number is the largest
+
+FOR num in numbers:
+    IF num < min THEN:
+        min = num
+    IF num > max THEN:
+        max = num
+
+PRINT "The average of the five numbers is:", average
+PRINT "The smallest number is:", min
+PRINT "The largest number is:", max
