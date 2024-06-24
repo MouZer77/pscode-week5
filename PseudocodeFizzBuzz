@@ -1,0 +1,10 @@
+FOR each number from 1 to 100 DO:
+    IF number % 15 == 0 THEN:        // Divisible by both 3 and 5
+        PRINT "FizzBuzz"
+    ELSE IF number % 3 == 0 THEN:    // Divisible by 3
+        PRINT "Fizz"
+    ELSE IF number % 5 == 0 THEN:    // Divisible by 5
+        PRINT "Buzz"
+    ELSE:                            // Not divisible by 3 or 5
+        PRINT number
+END
